@@ -13,11 +13,7 @@ button.addEventListener("click", async function() {
     btn.textContent = "loading..."
 
     try {
-        const response = await fetch("https://api.supadata.ai/v1/youtube/transcript?url=" + encodeURIComponent(url) + "&text=true", {
-            headers: {
-            "x-api-key": "sd_a4ebbd657badeb72a518c42562fa62e1"
-            }
-        })
+        const response = await fetch("http://localhost:3000/transcript?url=" + encodeURIComponent(url))
         const data = await response.json()
 
         if (!data.content) {
