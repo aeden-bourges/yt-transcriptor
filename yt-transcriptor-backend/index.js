@@ -11,7 +11,7 @@ app.get('/transcript', async function(req, res) {
     try {
         const response = await fetch("https://api.supadata.ai/v1/youtube/transcript?url=" + encodeURIComponent(url) + "&text=true", {
             headers: {
-                "x-api-key": process.env.SUPADATA_API_KEY
+                "x-api-key": process.env.SUPADATA_API_KEY2
             }
         })
         const data = await response.json()
